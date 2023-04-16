@@ -1,0 +1,12 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--gateColor: #247881;
+	--gateColor2: #43919b;
+	--gateColor3: #30aadd;
+	--gateColor4: #00ffc6;
+}
