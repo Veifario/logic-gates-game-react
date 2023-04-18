@@ -17,6 +17,7 @@ export const lvl6_completed = () => ({ type: "LVL6_COMPLETED" });
 
 export const addUsers = (data) => ({ type: "GIVE_USERS_INFO", payload: data });
 
+// Game Actions
 export const gateIndexIncrease = () => ({ type: "INDEX_INCREASE" });
 export const gateArrowStart = (ref) => ({
 	type: "GATE_ARROW_START",

@@ -3,8 +3,11 @@ import s from "./index.module.scss";
 import Draggable from "react-draggable";
 import { useDispatch, useSelector } from "react-redux";
 import { gateArrowEnd, gateIndexIncrease } from "../../../redux/actions";
+import { useXarrow } from "react-xarrows";
 
-const NorGate = () => {
+const NorGate = ({ id }) => {
+	const updateCoord = useXarrow();
+
 	// Arrow Coordinates
 	const startCoord = useSelector((state) => state.game.gateArrowStart);
 	const endCoord = useSelector((state) => state.game.gateArrowStart);
@@ -21,8 +24,13 @@ const NorGate = () => {
 	};
 
 	return (
-		<Draggable bounds="parent" onStart={() => handleZindex(blockRef.current)}>
+		<Draggable
+			bounds="parent"
+			onDrag={updateCoord}
+			onStart={() => handleZindex(blockRef.current)}
+		>
 			<div
+				id={id}
 				className={s.root}
 				ref={blockRef}
 				onClick={() => dispatch(gateArrowEnd(blockRef))}
