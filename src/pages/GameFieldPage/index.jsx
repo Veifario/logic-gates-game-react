@@ -5,6 +5,8 @@ import NandGate from "../../components/Gates/NandGate";
 import OrGate from "../../components/Gates/OrGate";
 import NotGate from "../../components/Gates/NotGate";
 import NorGate from "../../components/Gates/NorGate";
+import DropdownMenu from "../../components/DropdownMenu";
+import DisplayDropdown from "../../components/DropdownMenu/DisplayDropdown";
 
 const GameFieldPage = () => {
 	const [gateArrows, setGateArrows] = useState({
@@ -19,6 +21,7 @@ const GameFieldPage = () => {
 			<OrGate />
 			<NorGate />
 			<NotGate />
+			<DisplayDropdown/>
 		</div>
 	);
 };
