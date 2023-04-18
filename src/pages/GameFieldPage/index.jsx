@@ -6,6 +6,7 @@ import OrGate from "../../components/Gates/OrGate";
 import NotGate from "../../components/Gates/NotGate";
 import NorGate from "../../components/Gates/NorGate";
 import Xarrows from "react-xarrows";
+import DisplayDropdown from "../../components/DropdownMenu/DisplayDropdown";
 
 const gates = { and: 1, or: 2, not: 1, nor: 1, nand: 0 };
 
@@ -96,7 +97,10 @@ const GameFieldPage = () => {
 		));
 	};
 
-	return <div className={s.root}>{displayGatesAndArrows()}</div>;
+	return (
+		<div className={s.root}>
+			{displayGatesAndArrows()}
+			<DisplayDropdown />
+		</div>
+	);
 };
-
-export default GameFieldPage;
