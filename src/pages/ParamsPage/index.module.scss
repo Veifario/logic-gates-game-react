@@ -1,0 +1,27 @@
+.root {
+  color: white;
+  background: url(../../assets/bac.jpg) no-repeat center/cover;
+
+  .bac {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        330.24deg,
+        rgba(0, 0, 0, 0) 31.06%,
+        #000000 108.93%
+      ),
+      linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 77.78%);
+  }
+}
