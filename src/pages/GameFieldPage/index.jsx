@@ -104,3 +104,5 @@ const GameFieldPage = () => {
 		</div>
 	);
 };
+
+export default GameFieldPage;
