@@ -4,7 +4,7 @@ import Draggable from "react-draggable";
 import { useDispatch, useSelector } from "react-redux";
 import { gateIndexIncrease } from "../../../redux/actions";
 
-const NandGate = () => {
+const NandGate = ({id}) => {
 	const index = useSelector((state) => state.game.gateZIndex);
 	const dispatch = useDispatch();
 
@@ -17,7 +17,7 @@ const NandGate = () => {
 
 	return (
 		<Draggable bounds="parent" onStart={() => handleZindex(blockRef.current)}>
-			<div className={s.root} ref={blockRef}>
+			<div id={id} className={s.root} ref={blockRef}>
 				<div className={s.body}></div>
 				<div className={s.circle}></div>
 			</div>

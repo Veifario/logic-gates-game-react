@@ -1,23 +1,14 @@
 {
 	"users": [
-		{ "id": 1, "userName": "Alex", "userSurname": "Gyver", "score": 32 },
-		{ "id": 2, "userName": "Beka", "userSurname": "Otabekov", "score": 12 }
+		{ "id": 1, "userName": "Alex", "score": 32 },
+		{ "id": 2, "userName": "Beka", "score": 12 }
 	],
+
 	"progress": [
 		{
 			"id": 1,
 			"userName": "Alex",
-			"lvls": {
-				"lvl1": { "active": true, "passed": false },
-				"lvl2": { "active": false, "passed": false },
-				"lvl3": { "active": false, "passed": false },
-				"lvl4": { "active": false, "passed": false },
-				"lvl5": { "active": false, "passed": false }
-			}
-		},
-		{
-			"id": 2,
-			"userName": "Beka",
+			"date": "04/16/2023 19:20:32",
 			"lvls": {
 				"lvl1": { "active": true, "passed": false },
 				"lvl2": { "active": false, "passed": false },
@@ -26,5 +17,18 @@
 				"lvl5": { "active": false, "passed": false }
 			}
 		}
-	]
+	],
+
+	"lvlsLogic": {
+		"lvl1": {
+			"inputs": [0, 1],
+			"output": 0,
+			"gates": { "and": 0, "or": 2, "not": 1, "nor": 0, "nand": 0 }
+		},
+		"lvl2": {
+			"inputs": [0, 0, 1],
+			"output": 1,
+			"gates": { "and": 0, "or": 2, "not": 1, "nor": 0, "nand": 0 }
+		}
+	}
 }
