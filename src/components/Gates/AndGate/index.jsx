@@ -44,9 +44,9 @@ const AndGate = ({ id }) => {
 			onStop={updateCoord}
 		>
 			<div id={id} className={s.root} ref={blockRef}>
-				<ArrowDot type="input" onClick={handleArrowAdd} />
+				<ArrowDot type="input" onClick={handleArrowAdd} style={{transform: "translate(-50%)"}} />
 				<div className={s.body}></div>
-				<ArrowDot type="output" onClick={handleArrowAdd} />
+				<ArrowDot type="output" onClick={handleArrowAdd} style={{transform: "translate(-48%)"}} />
 			</div>
 		</Draggable>
 	);

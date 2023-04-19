@@ -8,6 +8,7 @@ import {
 	addArrowEnd,
 } from "../../../redux/actions";
 import { useXarrow } from "react-xarrows";
+import ArrowDot from "../../ArrowDot";
 
 const NorGate = ({ id }) => {
 	const updateCoord = useXarrow();
@@ -40,10 +41,12 @@ const NorGate = ({ id }) => {
 			onDrag={updateCoord}
 			onStart={() => handleZindex(blockRef.current)}
 		>
-			<div id={id} className={s.root} ref={blockRef} onClick={handleArrowAdd}>
+			<div id={id} className={s.root} ref={blockRef} >
+				<ArrowDot type="input" onClick={handleArrowAdd} style={{transform: "translate(70%)"}}/>
 				<div className={s.tail}></div>
 				<div className={s.head}></div>
 				<div className={s.circle}></div>
+				<ArrowDot type="output" onClick={handleArrowAdd}/>
 			</div>
 		</Draggable>
 	);

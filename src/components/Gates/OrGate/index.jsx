@@ -8,6 +8,7 @@ import {
 	gateIndexIncrease,
 } from "../../../redux/actions";
 import { useXarrow } from "react-xarrows";
+import ArrowDot from "../../ArrowDot";
 
 const OrGate = ({ id }) => {
 	const updateCoord = useXarrow();
@@ -41,9 +42,11 @@ const OrGate = ({ id }) => {
 			onStart={() => handleZindex(blockRef.current)}
 			onStop={updateCoord}
 		>
-			<div id={id} className={s.root} ref={blockRef} onClick={handleArrowAdd}>
+			<div id={id} className={s.root} ref={blockRef} >
+				<ArrowDot type="input" onClick={handleArrowAdd} style={{transform: "translate(60%)"}}/>
 				<div className={s.tail}></div>
 				<div className={s.head}></div>
+				<ArrowDot type="output" onClick={handleArrowAdd} style={{transform: "translate(20%)"}} />
 			</div>
 		</Draggable>
 	);

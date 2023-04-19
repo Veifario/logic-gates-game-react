@@ -3,11 +3,12 @@
 	width: 15px;
 	height: 15px;
 	position: absolute;
-	top: 45%;
-	transform: translate(-50%);
+	top: 43%;
+	transform: translate(100%);
 
 	border-radius: 50%;
 	background-color: black;
+	z-index: 2000;
 
 	cursor: pointer;
 

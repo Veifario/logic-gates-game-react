@@ -10,7 +10,7 @@ import DisplayDropdown from "../../components/DropdownMenu/DisplayDropdown";
 import { useDispatch, useSelector } from "react-redux";
 import { removeArrow } from "../../redux/actions";
 
-const gates = { and: 1, or: 2, not: 1, nor: 1, nand: 0 };
+const gates = { and: 1, or: 1, not: 1, nor: 1, nand: 1 };
 
 const GameFieldPage = () => {
 	const dispatch = useDispatch();
