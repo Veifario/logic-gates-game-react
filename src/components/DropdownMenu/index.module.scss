@@ -1,11 +1,17 @@
-  .dropdownMenu {
+  .root {
+    width: 120px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.301);
+    overflow: hidden;
+  
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
 
-    position: absolute;
-    top: 20px;
+    .test{
+      display: none;
+    }
   }
 

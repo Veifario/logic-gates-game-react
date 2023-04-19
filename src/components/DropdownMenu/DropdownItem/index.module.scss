@@ -1,5 +1,12 @@
-button{
-    border: none;
-    background-color: transparent;
-    font-size: 16px;
+.item {
+  width: 120px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+
+  &:hover {
+    color: white;
+    background-color: #49b47e;
+  }
 }

@@ -1,18 +1,21 @@
 .root {
+  position: absolute;
+  top: 5px;
+  right: 100px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
 
-  position: absolute;
-  top: 5px;
-  right: 55px;
-
-  .openBtn{
-    width: 100px;
-    height: 40px;
+  .openBtn {
+    width: 120px;
+    height: 45px;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.301), -2px 0 5px rgba(0, 0, 0, 0.301);
-    font-size: 20px;
+    font-size: 22px;
+    background-color: #49b47e;
+    border-radius: 6px;
+    border: none;
   }
 }

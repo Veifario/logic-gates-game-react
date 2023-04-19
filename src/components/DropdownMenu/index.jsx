@@ -1,8 +1,11 @@
 import React from "react";
 import s from "./index.module.scss";
 import DropdownItem from "./DropdownItem";
+import TipsForNotGate from "./Tips/TipsForNotGate";
 
 const DropdownMenu = () => {
+
+
   const data = [
     { id: 1, text: "Not gate" },
     { id: 2, text: "And gate" },
@@ -12,12 +15,13 @@ const DropdownMenu = () => {
   ];
 
   const displayItems = () =>
-    data.map((e) => {
-      return <DropdownItem key={e.id} text={e.text} />;
+    data.map(({ id, text }) => {
+      return <DropdownItem key={id} text={text} />;
     });
+
   return (
     <div className={s.root}>
-      <h3>TIPS</h3>
+      <TipsForNotGate />
       {displayItems()}
     </div>
   );
