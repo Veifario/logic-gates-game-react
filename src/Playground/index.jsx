@@ -91,25 +91,6 @@ const PlayGround = () => {
 
 	return (
 		<div>
-			<h3>
-				<u>Playground</u>
-			</h3>
-			<p>
-				you can drag and drop shpaes from the left toolbox menu. you can select
-				any shape and then topbar will apear with some options.
-				<br />
-				<strong>
-					it's strongly recommended to use full screen!{" "}
-					<a
-						href="https://lwwwp.csb.app/Playground"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						click here
-					</a>
-				</strong>
-			</p>
-
 			<div
 				className="canvasStyle"
 				id="canvas"
@@ -187,7 +168,6 @@ const PlayGround = () => {
 							/>
 						))}
 				</div>
-				{/* xarrow connections*/}
 				{lines.map((line, i) => (
 					<Xarrow
 						key={line.props.start + "-" + line.props.end + i}
@@ -196,16 +176,6 @@ const PlayGround = () => {
 						setSelected={setSelected}
 					/>
 				))}
-				{/* boxes menu that may be opened */}
-				{lines.map((line, i) =>
-					line.menuWindowOpened ? (
-						<MenuWindow
-							key={line.props.start + "-" + line.props.end + i}
-							setLines={setLines}
-							line={line}
-						/>
-					) : null
-				)}
 			</div>
 		</div>
 	);

@@ -1,0 +1,40 @@
+.input,
+.output {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 45%;
+	transform: translate(-50%);
+
+	border-radius: 50%;
+	background-color: black;
+
+	cursor: pointer;
+
+	&::after {
+		display: block;
+		content: "";
+
+		width: 10px;
+		height: 2px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+
+		background-color: black;
+	}
+}
+
+.input {
+	left: -17px;
+	&::after {
+		left: 15px;
+	}
+}
+
+.output {
+	right: -32px;
+	&::after {
+		right: 15px;
+	}
+}

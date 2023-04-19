@@ -1,7 +1,7 @@
 :root {
 	--interfacesBarWidthPx: 100px;
-	--canvasWidthVw: 70vw;
-	--canvasHeightVh: 70vh;
+	--canvasWidthVw: 100vw;
+	--canvasHeightVh: 100vh;
 }
 
 .fixedBoxStyle {
@@ -60,15 +60,8 @@
 	color: black;
 }
 
-/*.canvasContainerStyle {*/
-/*  position: relative;*/
-/*  background: white;*/
-/*  color: black;*/
-/*  width: var(--canvasWidthVw);*/
-/*}*/
-
 .toolboxMenu {
-	width: 100px;
+	width: 200px;
 	background: rgb(200, 200, 200);
 	text-align: center;
 }

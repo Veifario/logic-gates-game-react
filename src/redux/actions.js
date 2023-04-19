@@ -19,11 +19,10 @@ export const addUsers = (data) => ({ type: "GIVE_USERS_INFO", payload: data });
 
 // Game Actions
 export const gateIndexIncrease = () => ({ type: "INDEX_INCREASE" });
-export const gateArrowStart = (ref) => ({
-	type: "GATE_ARROW_START",
-	payload: ref,
-});
-export const gateArrowEnd = (ref) => ({
-	type: "GATE_ARROW_END",
-	payload: ref,
+export const addArrowStart = (id) => ({ type: "ARROW_START_ADD", payload: id });
+export const addArrowEnd = (id) => ({ type: "ARROW_END_ADD", payload: id });
+
+export const removeArrow = (arrows) => ({
+	type: "ARROW_REMOVE",
+	payload: arrows,
 });

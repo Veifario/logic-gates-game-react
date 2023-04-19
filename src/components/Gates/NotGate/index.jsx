@@ -2,16 +2,20 @@ import React, { useRef, useState } from "react";
 import s from "./index.module.scss";
 import Draggable from "react-draggable";
 import { useDispatch, useSelector } from "react-redux";
-import { gateIndexIncrease } from "../../../redux/actions";
-import { gateArrowStart } from "../../../redux/actions";
+import {
+	gateIndexIncrease,
+	addArrowStart,
+	addArrowEnd,
+} from "../../../redux/actions";
 import { useXarrow } from "react-xarrows";
 
 const NotGate = ({ id }) => {
 	const updateCoord = useXarrow();
-
-	// Arrow Coordinates
-	const startCoord = useSelector((state) => state.game.gateArrowStart);
-	const endCoord = useSelector((state) => state.game.gateArrowEnd);
+	
+	// Arrow settings
+	const settings = useSelector(
+		(state) => state.game.connectionSettings.selectedGate
+	);
 
 	// Z-Index changer
 	const index = useSelector((state) => state.game.gateZIndex);
@@ -24,6 +28,12 @@ const NotGate = ({ id }) => {
 		dispatch(gateIndexIncrease());
 	};
 
+	const handleArrowAdd = () => {
+		if (settings === id) return;
+		if (settings === "") dispatch(addArrowStart(id));
+		else dispatch(addArrowEnd(id));
+	};
+
 	return (
 		<Draggable
 			bounds="parent"
@@ -31,12 +41,7 @@ const NotGate = ({ id }) => {
 			onStart={() => handleZindex(blockRef.current)}
 			onStop={updateCoord}
 		>
-			<div
-				id={id}
-				className={s.root}
-				ref={blockRef}
-				onClick={() => dispatch(gateArrowStart(blockRef))}
-			>
+			<div id={id} className={s.root} ref={blockRef} onClick={handleArrowAdd}>
 				<div className={s.triangle}></div>
 				<div className={s.circle}></div>
 			</div>
