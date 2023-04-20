@@ -29,11 +29,17 @@ const NorGate = ({ id }) => {
 		dispatch(gateIndexIncrease());
 	};
 
-	const handleArrowAdd = () => {
+	const handleArrowEnd = () => {
+		if (settings === "") return;
+		else dispatch(addArrowEnd(id));
+	};
+	const handleArrowStart = () => {
 		if (settings === id) return;
 		if (settings === "") dispatch(addArrowStart(id));
 		else dispatch(addArrowEnd(id));
 	};
+
+	const getOutputLogic = (input0, input1) => !(input0 || input1);
 
 	return (
 		<Draggable
@@ -41,12 +47,20 @@ const NorGate = ({ id }) => {
 			onDrag={updateCoord}
 			onStart={() => handleZindex(blockRef.current)}
 		>
-			<div id={id} className={s.root} ref={blockRef} >
-				<ArrowDot type="input" onClick={handleArrowAdd} style={{transform: "translate(70%)"}}/>
+			<div id={id} className={s.root} ref={blockRef}>
+				<ArrowDot
+					type="input"
+					onClick={handleArrowEnd}
+					style={{ transform: "translate(70%)" }}
+				/>
 				<div className={s.tail}></div>
 				<div className={s.head}></div>
 				<div className={s.circle}></div>
-				<ArrowDot type="output" onClick={handleArrowAdd}/>
+				<ArrowDot
+					active={getOutputLogic(0, 1)}
+					type="output"
+					onClick={handleArrowStart}
+				/>
 			</div>
 		</Draggable>
 	);

@@ -1,9 +1,4 @@
 {
-	"users": [
-		{ "id": 1, "userName": "Alex", "score": 32 },
-		{ "id": 2, "userName": "Beka", "score": 12 }
-	],
-
 	"progress": [
 		{
 			"id": 1,
@@ -19,16 +14,48 @@
 		}
 	],
 
-	"lvlsLogic": {
-		"lvl1": {
-			"inputs": [0, 1],
-			"output": 0,
-			"gates": { "and": 0, "or": 2, "not": 1, "nor": 0, "nand": 0 }
-		},
-		"lvl2": {
-			"inputs": [0, 0, 1],
+	"lvlsLogic": [
+		{
+			"id": 1,
+			"lvl": 1,
+			"inputs": [1, 0, 1],
 			"output": 1,
 			"gates": { "and": 0, "or": 2, "not": 1, "nor": 0, "nand": 0 }
+		},
+		{
+			"id": 2,
+			"lvl": 2,
+			"inputs": [0, 0, 1],
+			"output": 0,
+			"gates": { "and": 0, "or": 0, "not": 0, "nor": 1, "nand": 1 }
+		},
+		{
+			"id": 3,
+			"lvl": 3,
+			"inputs": [1, 1, 0, 1, 1],
+			"output": 0,
+			"gates": { "and": 0, "or": 1, "not": 0, "nor": 1, "nand": 2 }
+		},
+		{
+			"id": 4,
+			"lvl": 4,
+			"inputs": [1, 0, 0, 0, 1, 0, 1, 1],
+			"output": 1,
+			"gates": { "and": 1, "or": 3, "not": 1, "nor": 0, "nand": 3 }
+		},
+		{
+			"id": 5,
+			"lvl": 5,
+			"inputs": [0, 0, 0, 0, 0, 1, 1, 1],
+			"output": 1,
+			"gates": { "and": 1, "or": 2, "not": 1, "nor": 3, "nand": 1 }
+		},
+		{
+			"id": 6,
+			"lvl": 6,
+			"inputs": [0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0],
+			"output": 0,
+			"gates": { "and": 3, "or": 1, "not": 3, "nor": 5, "nand": 2 }
 		}
-	}
+	]
 }

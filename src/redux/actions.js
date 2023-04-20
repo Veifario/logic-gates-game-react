@@ -18,8 +18,18 @@ export const lvl6_completed = () => ({ type: "LVL6_COMPLETED" });
 export const addUsers = (data) => ({ type: "GIVE_USERS_INFO", payload: data });
 
 // Game Actions
+
+export const fetchLvlLogic = () => ({ type: "FETCH_LVL_LOGIC" });
+export const fetchLvlLogicDone = (data) => ({
+	type: "FETCH_LVL_LOGIC_DONE",
+	payload: data,
+});
+
 export const gateIndexIncrease = () => ({ type: "INDEX_INCREASE" });
-export const addArrowStart = (id) => ({ type: "ARROW_START_ADD", payload: id });
+export const addArrowStart = (id, output) => ({
+	type: "ARROW_START_ADD",
+	payload: { id, output },
+});
 export const addArrowEnd = (id) => ({ type: "ARROW_END_ADD", payload: id });
 
 export const removeArrow = (arrows) => ({

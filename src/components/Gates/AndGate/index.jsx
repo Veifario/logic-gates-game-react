@@ -29,12 +29,17 @@ const AndGate = ({ id }) => {
 		dispatch(gateIndexIncrease());
 	};
 
-	const handleArrowAdd = (e) => {
-		// e.stopPropagation();
+	const handleArrowEnd = () => {
+		if (settings === "") return;
+		else dispatch(addArrowEnd(id));
+	};
+	const handleArrowStart = () => {
 		if (settings === id) return;
 		if (settings === "") dispatch(addArrowStart(id));
 		else dispatch(addArrowEnd(id));
 	};
+
+	const getOutputLogic = (input0, input1) => input0 && input1;
 
 	return (
 		<Draggable
@@ -44,9 +49,18 @@ const AndGate = ({ id }) => {
 			onStop={updateCoord}
 		>
 			<div id={id} className={s.root} ref={blockRef}>
-				<ArrowDot type="input" onClick={handleArrowAdd} style={{transform: "translate(-50%)"}} />
+				<ArrowDot
+					type="input"
+					onClick={handleArrowEnd}
+					style={{ transform: "translate(-50%)" }}
+				/>
 				<div className={s.body}></div>
-				<ArrowDot type="output" onClick={handleArrowAdd} style={{transform: "translate(-48%)"}} />
+				<ArrowDot
+					active={getOutputLogic(1, 1)}
+					type="output"
+					onClick={handleArrowStart}
+					style={{ transform: "translate(-48%)" }}
+				/>
 			</div>
 		</Draggable>
 	);

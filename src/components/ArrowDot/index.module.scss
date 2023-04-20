@@ -24,6 +24,14 @@
 
 		background-color: black;
 	}
+
+	&.active {
+		background-color: var(--gateColor3);
+		
+		&::after {
+			background-color: var(--gateColor3);
+		}
+	}
 }
 
 .input {

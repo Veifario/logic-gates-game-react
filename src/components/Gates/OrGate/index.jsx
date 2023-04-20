@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import s from "./index.module.scss";
 import Draggable from "react-draggable";
 import { useDispatch, useSelector } from "react-redux";
@@ -29,11 +29,19 @@ const OrGate = ({ id }) => {
 		dispatch(gateIndexIncrease());
 	};
 
-	const handleArrowAdd = () => {
-		if (settings === id) return;
-		if (settings === "") dispatch(addArrowStart(id));
+	const handleArrowEnd = () => {
+		if (settings === "") return;
 		else dispatch(addArrowEnd(id));
 	};
+	const handleArrowStart = () => {
+		if (settings === id) return;
+		if (settings === "") dispatch(addArrowStart(id, getOutputLogic(0, 1)));
+		else dispatch(addArrowEnd(id));
+	};
+
+	function getOutputLogic(input0, input1) {
+		return input0 || input1;
+	}
 
 	return (
 		<Draggable
@@ -42,11 +50,20 @@ const OrGate = ({ id }) => {
 			onStart={() => handleZindex(blockRef.current)}
 			onStop={updateCoord}
 		>
-			<div id={id} className={s.root} ref={blockRef} >
-				<ArrowDot type="input" onClick={handleArrowAdd} style={{transform: "translate(60%)"}}/>
+			<div id={id} className={s.root} ref={blockRef}>
+				<ArrowDot
+					type="input"
+					onClick={handleArrowEnd}
+					style={{ transform: "translate(60%)" }}
+				/>
 				<div className={s.tail}></div>
 				<div className={s.head}></div>
-				<ArrowDot type="output" onClick={handleArrowAdd} style={{transform: "translate(20%)"}} />
+				<ArrowDot
+					active={getOutputLogic(0, 1)}
+					type="output"
+					onClick={handleArrowStart}
+					style={{ transform: "translate(20%)" }}
+				/>
 			</div>
 		</Draggable>
 	);
