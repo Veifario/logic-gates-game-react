@@ -1,8 +1,11 @@
 export const switchToDark = () => ({ type: "DARK_THEME" });
 export const switchToLight = () => ({ type: "LIGHT_THEME" });
 
-export const giveAllUserInfo = () => ({ type: "GIVE_USERS_INFO" });
 
+export const giveUserInfo = (data) => ({
+	type: "GIVE_USERS_INFO",
+	payload: data,
+});
 export const giveUserName = (inputValue) => ({
 	type: "GIVE_USER_NAME",
 	payload: inputValue,

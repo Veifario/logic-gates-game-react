@@ -1,8 +1,4 @@
 {
-	"users": [
-		{ "id": 1, "userName": "Alex", "score": 32 },
-		{ "id": 2, "userName": "Beka", "score": 12 }
-	],
 
 	"progress": [
 		{

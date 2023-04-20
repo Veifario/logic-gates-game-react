@@ -16,7 +16,7 @@ const LoadPage = () => {
 					</div>
 					<div className={s.title}>
 						<img src={icon1} alt="" />
-						<h1> Выберите ячейку записи</h1>
+						<h1> Выберите ячейку загрузки</h1>
 					</div>
 				</div>
         <div className={s.addDisplay}>

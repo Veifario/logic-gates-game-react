@@ -1,11 +1,33 @@
 .root {
-	height: 90vh;
-	width: 80vw;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  height: 90vh;
+  width: 80vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-	border: 5px solid black;
-	padding: 20px;
+  border: 5px solid black;
+  padding: 20px;
+
+  .link_card {
+    position: absolute;
+
+    left: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 35px;
+
+    background-color: #a50f0f;
+
+    border-radius: 50px;
+  }
+  .link {
+    font-size: 20px;
+
+    color: #ffffff;
+  }
 }
