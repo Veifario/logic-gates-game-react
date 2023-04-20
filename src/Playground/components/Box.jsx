@@ -3,7 +3,7 @@ import "./Box.css";
 import Draggable from "react-draggable";
 import { useXarrow } from "react-xarrows";
 
-const Box = (props) => {
+const Box = (props) => { 
 	const updateXarrow = useXarrow();
 	const handleClick = (e) => {
 		e.stopPropagation(); //so only the click event on the box will fire on not on the container itself
@@ -61,7 +61,6 @@ const Box = (props) => {
 						left: props.box.x,
 						top: props.box.y,
 						background,
-						// border: "black solid 2px",
 					}}
 					onClick={handleClick}
 					id={props.box.id}
@@ -69,9 +68,6 @@ const Box = (props) => {
 					{props.box.name ? props.box.name : props.box.id}
 				</div>
 			</Draggable>
-			{/*{type === "middleBox" && menuWindowOpened ?*/}
-			{/*  <MenuWindow setBoxes={props.setBoxes} box={props.box}/> : null*/}
-			{/*}*/}
 		</React.Fragment>
 	);
 };

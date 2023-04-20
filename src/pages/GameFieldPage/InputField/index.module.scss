@@ -1,0 +1,12 @@
+.root {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+	position: absolute;
+    left: -5px;
+	top: 50%;
+	transform: translateY(-50%);
+}

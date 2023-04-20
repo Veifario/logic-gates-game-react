@@ -1,0 +1,18 @@
+.root {
+	width: 120px;
+	position: absolute;
+	transform: translateY(75%);
+
+	border-radius: 12px;
+	box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.301);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 5px;
+
+	.test {
+		display: none;
+	}
+}

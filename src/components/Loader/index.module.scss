@@ -1,0 +1,12 @@
+.root {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+    z-index: 999999;
+
+    background-color: var(--gateColor2);
+}

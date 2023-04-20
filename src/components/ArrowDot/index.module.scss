@@ -1,0 +1,49 @@
+.input,
+.output {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 43%;
+	transform: translate(100%);
+
+	border-radius: 50%;
+	background-color: black;
+	z-index: 2000;
+
+	cursor: pointer;
+
+	&::after {
+		display: block;
+		content: "";
+
+		width: 10px;
+		height: 2px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+
+		background-color: black;
+	}
+
+	&.active {
+		background-color: var(--gateColor3);
+		
+		&::after {
+			background-color: var(--gateColor3);
+		}
+	}
+}
+
+.input {
+	left: -17px;
+	&::after {
+		left: 15px;
+	}
+}
+
+.output {
+	right: -32px;
+	&::after {
+		right: 15px;
+	}
+}
