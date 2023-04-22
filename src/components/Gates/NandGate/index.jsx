@@ -36,7 +36,6 @@ const NandGate = ({ id }) => {
 	const handleArrowStart = () => {
 		if (settings === id) return;
 		if (settings === "") dispatch(addArrowStart(id));
-		else dispatch(addArrowEnd(id));
 	};
 
 	const getOutputLogic = (input0, input1) => !(input0 && input1);

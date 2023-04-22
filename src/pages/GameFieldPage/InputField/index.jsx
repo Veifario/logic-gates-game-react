@@ -11,10 +11,9 @@ const InputField = () => {
 	);
 	const dispatch = useDispatch();
 
-	const handleArrowAdd = (id) => {
+	const handleArrowAdd = (id, output) => {
 		if (settings === id) return;
-		if (settings === "") dispatch(addArrowStart(id));
-		else dispatch(addArrowEnd(id));
+		if (settings === "") dispatch(addArrowStart(id, output));
 	};
 
 	const displayInputs = () =>
@@ -25,7 +24,7 @@ const InputField = () => {
 				key={index}
 				active={e}
 				type="output"
-				onClick={() => handleArrowAdd(`input${index}`)}
+				onClick={() => handleArrowAdd(`input${index}`, e)}
 			/>
 		));
 

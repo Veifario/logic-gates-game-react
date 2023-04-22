@@ -21,6 +21,11 @@ const NotGate = ({ id }) => {
 	);
 	const arrows = useSelector((state) => state.game.arrows);
 
+	const getGateArrow = () => {
+		const foundArrow = arrows.find(({ end }) => end === id);
+		return foundArrow?.output;
+	};
+
 	// Z-Index changer
 	const index = useSelector((state) => state.game.gateZIndex);
 
@@ -35,11 +40,11 @@ const NotGate = ({ id }) => {
 	};
 	const handleArrowStart = () => {
 		if (settings === id) return;
-		if (settings === "") dispatch(addArrowStart(id));
-		else dispatch(addArrowEnd(id));
+		if (settings === "") dispatch(addArrowStart(id, getOutputLogic(getGateArrow())));
 	};
 
-	const getOutputLogic = (input0) => !input0;
+	const getOutputLogic = (input0) =>
+		typeof input0 === "number" ? +!input0 : false;
 
 	return (
 		<Draggable
@@ -56,7 +61,7 @@ const NotGate = ({ id }) => {
 				/>
 				<div className={s.triangle}></div>
 				<ArrowDot
-					active={getOutputLogic(0)}
+					active={getOutputLogic(getGateArrow())}
 					type="output"
 					onClick={handleArrowStart}
 					style={{ top: 23, transform: "translate(20%)" }}

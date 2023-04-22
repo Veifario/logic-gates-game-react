@@ -16,8 +16,9 @@ const ArrowsField = () => {
 		dispatch(removeArrow(arrowsList));
 	};
 	const displayArrows = () =>
-		arrows.map(({ start, end }, index) => (
+		arrows.map(({ start, end, output }, index) => (
 			<Xarrow
+				color={output === 1 ? "#21aed9" : "#383c3d"}
 				key={index}
 				zIndex={3000}
 				start={start}

@@ -36,7 +36,6 @@ const OrGate = ({ id }) => {
 	const handleArrowStart = () => {
 		if (settings === id) return;
 		if (settings === "") dispatch(addArrowStart(id, getOutputLogic(0, 1)));
-		else dispatch(addArrowEnd(id));
 	};
 
 	function getOutputLogic(input0, input1) {

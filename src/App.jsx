@@ -4,8 +4,6 @@ import AdminPage from "./pages/AdminPage";
 import NewGamePage from "./pages/NewGamePage";
 import GameFieldPage from "./pages/GameFieldPage";
 import PlayGround from "./Playground";
-import ParamsPage from "./pages/ParamsPage";
-import LoadPage from "./pages/LoadPage";
 
 function App() {
 	return (

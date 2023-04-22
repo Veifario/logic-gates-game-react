@@ -20,7 +20,7 @@
 			"lvl": 1,
 			"inputs": [1, 0, 1],
 			"output": 1,
-			"gates": { "and": 0, "or": 2, "not": 1, "nor": 0, "nand": 0 }
+			"gates": { "and": 0, "or": 0, "not": 3, "nor": 0, "nand": 0 }
 		},
 		{
 			"id": 2,
