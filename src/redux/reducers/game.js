@@ -49,6 +49,11 @@ export const game = (state = initialState, { type, payload }) => {
 				...state,
 				arrows: payload,
 			};
+		case "CLEAR_ARROWS":
+			return {
+				...state,
+				arrows: [],
+			};
 		default:
 			return state;
 	}

@@ -15,7 +15,7 @@ const OutputField = () => {
 
 	const finishPoint = () => {
 		const foundArrow = arrows.find(({ end }) => end === "output");
-		if (foundArrow?.output === output) window.alert("ВЫИГРАЛ ЕБАТЬ!");
+		// if (foundArrow?.output === output) window.alert("ВЫИГРАЛ ЕБАТЬ!");
 	};
 
 	const handleArrowEnd = (id) => {

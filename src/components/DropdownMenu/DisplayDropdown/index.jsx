@@ -7,7 +7,10 @@ const DisplayDropdown = () => {
 	const [isOpened, setIsOpened] = useState(false);
 
 	return (
-		<Draggable bounds="parent" handle="strong">
+		<Draggable
+			bounds={{ left: -500, top: 0, right: 10, bottom: 400 }}
+			handle="strong"
+		>
 			<div className={s.root}>
 				<strong>
 					<button

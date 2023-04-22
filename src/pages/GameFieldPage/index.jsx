@@ -4,15 +4,15 @@ import InputField from "./InputField";
 import OutputField from "./OutputField";
 import Loader from "../../components/Loader";
 import { Xwrapper } from "react-xarrows";
-import DisplayDropdown from "../../components/DropdownMenu/DisplayDropdown";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchLvlLogic, fetchLvlLogicDone } from "../../redux/actions";
 import { getLvlLogic } from "../../api/getRequest";
 import GatesField from "./GatesField";
 import ArrowsField from "./ArrowsField";
+import HelpersField from "./HelpersField";
 
 const GameFieldPage = () => {
-	let lvl = 1;
+	let lvl = 3;
 	const dispatch = useDispatch();
 	const loading = useSelector((state) => state.game.loading);
 
@@ -40,7 +40,7 @@ const GameFieldPage = () => {
 				<ArrowsField />
 			</Xwrapper>
 			<OutputField />
-			<DisplayDropdown />
+			<HelpersField />
 		</div>
 	);
 };

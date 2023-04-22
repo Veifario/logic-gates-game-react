@@ -35,12 +35,14 @@ const NotGate = ({ id }) => {
 	};
 
 	const handleArrowEnd = () => {
+		if (settings === id) return;
 		if (settings === "") return;
 		else dispatch(addArrowEnd(id));
 	};
 	const handleArrowStart = () => {
-		if (settings === id) return;
-		if (settings === "") dispatch(addArrowStart(id, getOutputLogic(getGateArrow())));
+		if (getGateArrow() === undefined) return;
+		if (settings === "")
+			dispatch(addArrowStart(id, getOutputLogic(getGateArrow())));
 	};
 
 	const getOutputLogic = (input0) =>

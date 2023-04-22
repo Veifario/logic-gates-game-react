@@ -18,6 +18,13 @@ const OrGate = ({ id }) => {
 		(state) => state.game.connectionSettings.selectedGate
 	);
 
+	const arrows = useSelector((state) => state.game.arrows);
+
+	const getGateArrow = () => {
+		const foundArrow = arrows.filter(({ end }) => end === id);
+		return foundArrow;
+	};
+
 	// Z-Index changer
 	const index = useSelector((state) => state.game.gateZIndex);
 	const dispatch = useDispatch();
@@ -30,17 +37,35 @@ const OrGate = ({ id }) => {
 	};
 
 	const handleArrowEnd = () => {
+		if (getGateArrow().length >= 2) return;
+		if (
+			settings === getGateArrow()[0]?.start ||
+			settings === getGateArrow()[1]?.start
+		)
+			return;
+		if (settings === id) return;
 		if (settings === "") return;
 		else dispatch(addArrowEnd(id));
 	};
 	const handleArrowStart = () => {
-		if (settings === id) return;
-		if (settings === "") dispatch(addArrowStart(id, getOutputLogic(0, 1)));
+		if (getGateArrow().length === 2) {
+			if (settings === "")
+				dispatch(
+					addArrowStart(
+						id,
+						getOutputLogic(
+							getGateArrow()?.[0]?.output,
+							getGateArrow()?.[1]?.output
+						)
+					)
+				);
+		}
 	};
 
-	function getOutputLogic(input0, input1) {
-		return input0 || input1;
-	}
+	const getOutputLogic = (input0, input1) => {
+		if (input0 !== undefined && input1 !== undefined)
+			return typeof input0 === "number" ? input0 || input1 : false;
+	};
 
 	return (
 		<Draggable
@@ -58,7 +83,10 @@ const OrGate = ({ id }) => {
 				<div className={s.tail}></div>
 				<div className={s.head}></div>
 				<ArrowDot
-					active={getOutputLogic(0, 1)}
+					active={getOutputLogic(
+						getGateArrow()?.[0]?.output,
+						getGateArrow()?.[1]?.output
+					)}
 					type="output"
 					onClick={handleArrowStart}
 					style={{ transform: "translate(20%)" }}

@@ -36,3 +36,5 @@ export const removeArrow = (arrows) => ({
 	type: "ARROW_REMOVE",
 	payload: arrows,
 });
+
+export const clearArrows = () => ({ type: "CLEAR_ARROWS" });
