@@ -11,20 +11,12 @@ const HelpersField = () => {
 	return (
 		<div className={s.root}>
 			<DisplayDropdown />
-			<Button
-				style={{ ...clearBtnStyle }}
-				onClick={() => dispatch(clearArrows())}
-			>
-				Clear Arrows
-			</Button>
+			<div className={s.clearBtns}>
+				<Button onClick={() => dispatch(clearArrows())}>Clear Arrows</Button>
+				<Button>Clear All</Button>
+			</div>
 		</div>
 	);
-};
-
-const clearBtnStyle = {
-	position: "absolute",
-	bottom: 10,
-	right: 10,
 };
 
 export default HelpersField;

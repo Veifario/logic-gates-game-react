@@ -46,6 +46,8 @@ const ArrowsField = () => {
 				key={index}
 				zIndex={0}
 				showHead={false}
+				curveness={.5}
+				strokeWidth={5}
 				start={start}
 				end={end}
 				endAnchor={"left"}

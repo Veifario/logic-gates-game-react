@@ -18,7 +18,7 @@ const TipsForNandGate = () => {
           <tr>
             <td>0</td>
             <td>0</td>
-            <td>0</td>
+            <td>1</td>
           </tr>
           <tr>
             <td>0</td>

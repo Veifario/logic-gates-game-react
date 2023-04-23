@@ -1,2 +1,12 @@
 .root {
+	.clearBtns {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		
+		position: absolute;
+		bottom: 15px;
+		right: 15px;
+	}
 }

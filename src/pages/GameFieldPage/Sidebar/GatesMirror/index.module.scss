@@ -1,0 +1,166 @@
+.root {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	.not {
+		position: absolute;
+		top: 30px;
+		left: 90px;
+
+		opacity: 0.3;
+
+		width: 50px;
+		height: 60px;
+
+		.triangle {
+			width: 100%;
+			height: 100%;
+
+			clip-path: polygon(100% 50%, 0% 100%, 0% 0%);
+			border: 1px solid black;
+			background-color: var(--gateColor);
+
+			cursor: no-drop;
+		}
+
+		.circle {
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			right: -10px;
+			top: 50%;
+
+			transform: translateY(-50%);
+
+			background-color: var(--gateColor);
+			border: 1px solid black;
+			border-radius: 50%;
+
+			cursor: no-drop;
+		}
+	}
+
+	.or,
+	.nor {
+		position: absolute;
+		top: 120px;
+		left: 70px;
+
+		width: 100px;
+		height: 100px;
+
+		opacity: 0.3;
+
+		background-color: var(--gateColor);
+		border-radius: 0% 100% 100% 0% / 51% 49% 51% 49%;
+		border: 1px solid black;
+
+		.head {
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			right: -1px;
+			top: 50%;
+			transform: translateY(-50%) rotate(45deg);
+
+			border-radius: 50px 0 50px 50px;
+			background-color: var(--gateColor);
+
+			&::after,
+			&::before {
+				content: "";
+				display: block;
+
+				width: 21px;
+				height: 1px;
+				position: absolute;
+				right: 0;
+				border-radius: 20px;
+
+				background-color: black;
+			}
+			&::before {
+				transform: rotate(90deg);
+				right: -15px;
+				bottom: 34px;
+				width: 30px;
+			}
+		}
+		.tail {
+			width: 35px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: -17px;
+			z-index: 20;
+
+			border-radius: 50%;
+			border-right: 1px solid black;
+			background-color: white;
+		}
+		cursor: no-drop;
+	}
+
+	.and,
+	.nand {
+		position: absolute;
+		top: 250px;
+		left: 70px;
+
+		opacity: 0.3;
+
+		.body {
+			width: 110px;
+			height: 100px;
+			border-radius: 0% 55% 55% 0% / 0% 50% 50% 0%;
+
+			background-color: var(--gateColor);
+			border: 1px solid black;
+
+			cursor: no-drop;
+		}
+	}
+
+	.nor {
+		top: 390px;
+
+		.circle {
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			right: -22px;
+			top: 50%;
+
+			transform: translateY(-50%);
+
+			background-color: var(--gateColor);
+			border-bottom: 1px solid black;
+			border-top: 1px solid black;
+			border-radius: 50%;
+
+			cursor: no-drop;
+		}
+	}
+
+	.nand {
+		top: 520px;
+		.circle {
+			width: 15px;
+			height: 15px;
+
+			position: absolute;
+			right: -10px;
+			top: 50%;
+
+			transform: translateY(-50%);
+
+			background-color: var(--gateColor);
+			border-bottom: 1px solid black;
+			border-top: 1px solid black;
+			border-radius: 50%;
+
+			cursor: no-drop;
+		}
+	}
+}

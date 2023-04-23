@@ -68,7 +68,6 @@
 
 	position: relative;
 	animation: slideUp $scrollTime linear forwards;
-	// animation-delay: 2s;
 	&:hover {
 		animation-play-state: paused;
 	}

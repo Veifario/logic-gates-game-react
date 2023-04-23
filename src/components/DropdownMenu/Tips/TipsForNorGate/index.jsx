@@ -13,7 +13,7 @@ const TipsForNorGate = () => {
           <tr>
             <th>A</th>
             <th>B</th>
-            <th>A Nor B</th>
+            <th>A nor B</th>
           </tr>
           <tr>
             <td>0</td>

@@ -47,6 +47,7 @@ const OrGate = ({ id }) => {
 		if (settings === "") return;
 		else dispatch(addArrowEnd(id));
 	};
+
 	const handleArrowStart = () => {
 		if (getGateArrow().length === 2) {
 			if (settings === "")

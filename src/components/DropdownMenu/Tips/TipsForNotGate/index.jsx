@@ -10,7 +10,7 @@ const TipsForNotGate = () => {
 				<tbody>
 					<tr>
 						<th>A</th>
-						<th>Not A</th>
+						<th>not A</th>
 					</tr>
 					<tr>
 						<td>0</td>
