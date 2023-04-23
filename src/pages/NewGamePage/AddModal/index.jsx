@@ -6,6 +6,7 @@ import { request, requestError } from "../../../redux/actions";
 import { postUsers } from "../../../api/postRequest";
 import { giveProgress } from "../../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
+import { getLvlsLength } from "../../../api/getRequest";
 
 const AddModal = ({ setIsVisible }) => {
   const posts = useSelector((state) => state.progress.usersProgress);
@@ -15,33 +16,28 @@ const AddModal = ({ setIsVisible }) => {
     date: "",
   });
 
+  const getLvls = async () => {
+    const lvlsLength = await getLvlsLength();
+    let lvls = [];
+    lvls.push({
+      active: true,
+      passed: false,
+    });
+    for (let i = 1; i < lvlsLength; i++)
+      lvls.push({
+        active: false,
+        passed: false,
+      });
+
+    return lvls;
+  };
+
   const addNewUser = async () => {
     const newUser = {
       id: uniqueId(),
       userName: inputValue.userName,
       date: getUploadDate(),
-      lvls: {
-        lvl1: {
-          active: true,
-          passed: false,
-        },
-        lvl2: {
-          active: false,
-          passed: false,
-        },
-        lvl3: {
-          active: false,
-          passed: false,
-        },
-        lvl4: {
-          active: false,
-          passed: false,
-        },
-        lvl5: {
-          active: false,
-          passed: false,
-        },
-      },
+      lvls: await getLvls(),
     };
     const updatedPosts = [...posts, newUser];
     try {

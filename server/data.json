@@ -4,93 +4,93 @@
       "id": "45ff4e85-d205-4471-89f8-5bffaf8b1374",
       "userName": "фывв",
       "date": "23/04/2023 16:42:05",
-      "lvls": {
-        "lvl1": {
+      "lvls": [
+        {
           "active": true,
           "passed": false
         },
-        "lvl2": {
+        {
           "active": false,
           "passed": false
         },
-        "lvl3": {
+        {
           "active": false,
           "passed": false
         },
-        "lvl4": {
+        {
           "active": false,
           "passed": false
         },
-        "lvl5": {
+        {
           "active": false,
           "passed": false
         }
-      }
+      ]
     },
     {
       "id": "7bf75566-06ad-4efd-a971-f5a4d0e4bc1d",
       "userName": "sdfsdf",
       "date": "23/04/2023 16:42:32",
-      "lvls": {
-        "lvl1": {
+      "lvls": [
+        {
           "active": true,
           "passed": false
         },
-        "lvl2": {
+        {
           "active": false,
           "passed": false
         },
-        "lvl3": {
+        {
           "active": false,
           "passed": false
         },
-        "lvl4": {
+        {
           "active": false,
           "passed": false
         },
-        "lvl5": {
+        {
           "active": false,
           "passed": false
         }
-      }
+      ]
     },
     {
-      "id": "3aac1c6c-5f20-4196-94a5-8b7fe21f0274",
-      "userName": "wef",
-      "date": "23/04/2023 17:31:21",
-      "lvls": {
-        "lvl1": {
+      "id": "e7db4e55-bffb-498f-bad4-71dde5a9b6f9",
+      "userName": "hello",
+      "date": "23/04/2023 18:14:23",
+      "lvls": [
+        {
           "active": true,
           "passed": false
         },
-        "lvl2": {
+        {
           "active": false,
           "passed": false
         },
-        "lvl3": {
+        {
           "active": false,
           "passed": false
         },
-        "lvl4": {
+        {
           "active": false,
           "passed": false
         },
-        "lvl5": {
+        {
+          "active": false,
+          "passed": false
+        },
+        {
           "active": false,
           "passed": false
         }
-      }
+      ]
     }
   ],
   "lvlsLogic": [
     {
       "id": 1,
       "lvl": 1,
-      "inputs": [
-        1,
-        0,
-        1
-      ],
+      "inputs": [1, 0, 1],
       "output": 1,
       "gates": {
         "and": 0,
@@ -103,11 +103,7 @@
     {
       "id": 2,
       "lvl": 2,
-      "inputs": [
-        0,
-        0,
-        1
-      ],
+      "inputs": [0, 0, 1],
       "output": 0,
       "gates": {
         "and": 0,
@@ -120,13 +116,7 @@
     {
       "id": 3,
       "lvl": 3,
-      "inputs": [
-        1,
-        1,
-        0,
-        1,
-        1
-      ],
+      "inputs": [1, 1, 0, 1, 1],
       "output": 0,
       "gates": {
         "and": 0,
@@ -139,16 +129,7 @@
     {
       "id": 4,
       "lvl": 4,
-      "inputs": [
-        1,
-        0,
-        0,
-        0,
-        1,
-        0,
-        1,
-        1
-      ],
+      "inputs": [1, 0, 0, 0, 1, 0, 1, 1],
       "output": 1,
       "gates": {
         "and": 1,
@@ -161,16 +142,7 @@
     {
       "id": 5,
       "lvl": 5,
-      "inputs": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        1,
-        1
-      ],
+      "inputs": [0, 0, 0, 0, 0, 1, 1, 1],
       "output": 1,
       "gates": {
         "and": 1,
@@ -183,20 +155,7 @@
     {
       "id": 6,
       "lvl": 6,
-      "inputs": [
-        0,
-        0,
-        1,
-        0,
-        0,
-        1,
-        1,
-        1,
-        1,
-        0,
-        0,
-        0
-      ],
+      "inputs": [0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0],
       "output": 0,
       "gates": {
         "and": 3,

@@ -10,6 +10,11 @@ export const getProgress = async () => {
 	return data;
 };
 
+export const getLvlsLength= async () => {
+	const { data } = await axios.get(`http://localhost:3001/lvlsLogic`);
+	return data.length;
+};
+
 export const getLvlLogic = async (id) => {
 	const { data } = await axios.get(`http://localhost:3001/lvlsLogic/${id}`);
 	return data;
