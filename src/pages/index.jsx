@@ -5,6 +5,7 @@ import GameFieldPage from "./GameFieldPage";
 import LoadPage from "./LoadPage";
 import NewGamePage from "./NewGamePage";
 import ParamsPage from "./ParamsPage";
+import TreePage from "./TreePage";
 
 export {
 	AdminPage,
@@ -14,4 +15,6 @@ export {
 	NewGamePage,
 	ParamsPage,
 	CreditsPage,
+	TreePage
+	
 };

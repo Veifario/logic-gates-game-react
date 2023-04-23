@@ -7,6 +7,7 @@ import {
 	LoadPage,
 	NewGamePage,
 	ParamsPage,
+	TreePage
 } from "./pages";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 				<Route path="/load" element={<LoadPage />} />
 				<Route path="/params" element={<ParamsPage />} />
 				<Route path="/credits" element={<CreditsPage />} />
+				<Route path="/tree" element={<TreePage/>}/>
 			</Routes>
 		</div>
 	);
