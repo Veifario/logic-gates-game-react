@@ -1,9 +1,5 @@
 import React from "react";
 import s from "./index.module.scss";
-import icon1 from "../../assets/font-play.png";
-import icon2 from "../../assets/font-refresh.png";
-import icon3 from "../../assets/font-settings.png";
-import icon4 from "../../assets/font-arrow-small-left.png";
 import { Link } from "react-router-dom";
 
 

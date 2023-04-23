@@ -1,7 +1,7 @@
 import moment from "moment";
 
 // Get date of upload new acc
-export const getUploadDate = () => moment().format("D/MM/YYYY h:mm:ss");
+export const getUploadDate = () => moment().format("D/MM/YYYY HH:mm:ss");
 
 // Calculating score
 export const calcPassedLvls = (lvls) => {

@@ -1,0 +1,52 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+        margin-bottom: 20px;
+
+        color: #000000;
+    }
+    
+    .agree {
+        width: 120px;
+        height: 40px;
+
+        font-size: 20px;
+
+        margin-right: 20px;
+
+        background-color: #FFFFFF;
+
+        border: 0.1px solid #000000;
+    }
+    .agree:hover {
+        transition: 0.3s;
+
+        color: #FFFFFF;
+        background-color: #0aab0a;
+
+        border: none;
+    }
+    .disAgree {
+        width: 120px;
+        height: 40px;
+
+        font-size: 20px;
+
+        background-color: #FFFFFF;
+
+        border: 0.1px solid #000000;
+    }
+    .disAgree:hover {
+        transition: 0.3s;
+
+        color: #FFFFFF;
+        background-color: #ff0000;
+
+        border: none;
+    }
+}

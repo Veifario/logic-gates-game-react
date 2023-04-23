@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	text-decoration: none;
 	box-sizing: border-box;
 }
 
@@ -13,4 +14,8 @@ body {
 	--gateColor2: #43919b;
 	--gateColor3: #fafa33;
 	--gateColor4: #00ffc6;
+}
+
+.container {
+	margin: 0 auto;
 }
