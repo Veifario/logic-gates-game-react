@@ -8,6 +8,7 @@ import {
 	NewGamePage,
 	ParamsPage,
 } from "./pages";
+import InteractiveBackround from "./components/InteractiveBackround";
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 				<Route path="/load" element={<LoadPage />} />
 				<Route path="/params" element={<ParamsPage />} />
 				<Route path="/credits" element={<CreditsPage />} />
+				<Route path="back" element={<InteractiveBackround />} />
 			</Routes>
 		</div>
 	);
