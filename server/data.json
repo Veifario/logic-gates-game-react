@@ -53,6 +53,33 @@
           "passed": false
         }
       }
+    },
+    {
+      "id": "3aac1c6c-5f20-4196-94a5-8b7fe21f0274",
+      "userName": "wef",
+      "date": "23/04/2023 17:31:21",
+      "lvls": {
+        "lvl1": {
+          "active": true,
+          "passed": false
+        },
+        "lvl2": {
+          "active": false,
+          "passed": false
+        },
+        "lvl3": {
+          "active": false,
+          "passed": false
+        },
+        "lvl4": {
+          "active": false,
+          "passed": false
+        },
+        "lvl5": {
+          "active": false,
+          "passed": false
+        }
+      }
     }
   ],
   "lvlsLogic": [

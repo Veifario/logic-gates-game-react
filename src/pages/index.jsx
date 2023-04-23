@@ -1,5 +1,6 @@
 import AdminPage from "./AdminPage";
 import ContinuePage from "./ContinuePage";
+import CreditsPage from "./CreditsPage";
 import GameFieldPage from "./GameFieldPage";
 import LoadPage from "./LoadPage";
 import NewGamePage from "./NewGamePage";
@@ -12,4 +13,5 @@ export {
 	LoadPage,
 	NewGamePage,
 	ParamsPage,
+	CreditsPage,
 };

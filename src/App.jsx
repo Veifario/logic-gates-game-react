@@ -1,9 +1,13 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import AdminPage from "./pages/AdminPage";
-import NewGamePage from "./pages/NewGamePage";
-import GameFieldPage from "./pages/GameFieldPage";
-import { LoadPage, ParamsPage } from "./pages";
+import {
+	AdminPage,
+	CreditsPage,
+	GameFieldPage,
+	LoadPage,
+	NewGamePage,
+	ParamsPage,
+} from "./pages";
 
 function App() {
 	return (
@@ -14,6 +18,7 @@ function App() {
 				<Route path="/newgame" element={<NewGamePage />} />
 				<Route path="/load" element={<LoadPage />} />
 				<Route path="/params" element={<ParamsPage />} />
+				<Route path="/credits" element={<CreditsPage />} />
 			</Routes>
 		</div>
 	);
