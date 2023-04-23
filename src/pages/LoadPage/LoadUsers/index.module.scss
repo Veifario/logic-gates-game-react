@@ -19,19 +19,19 @@
     padding: 20px;
     width: 50%;
 
-    h4{ 
-      color: #FFC600;
+    h4 {
+      color: #ffc600;
     }
   }
   .b {
     padding: 20px;
     width: 10%;
   }
-
-  .img {
-    position: absolute;
-    right: 20px;
-    width: 15px;
-    height: 15px;
+  .n {
+    width: 5%;
+    .img {
+      width: 15px;
+      height: 15px;
+    }
   }
 }

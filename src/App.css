@@ -11,3 +11,7 @@
   --gateColor3: #30aadd;
   --gateColor4: #00ffc6;
 }
+
+.container {
+  margin: 0 auto;
+}

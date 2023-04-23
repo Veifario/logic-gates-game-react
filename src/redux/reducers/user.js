@@ -1,4 +1,4 @@
-const initialState = { usersProgress: [], userName: "" };
+const initialState = { usersInfo: [], userName: "" };
 
 export const user = (state = initialState, { type, payload }) => {
 	switch (type) {

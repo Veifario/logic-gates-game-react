@@ -1,35 +1,45 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { calcPassedLvls } from "../../../utils";
 import s from "./index.module.scss";
-import { useDispatch, useSelector } from "react-redux";
 import Users from "../Users";
-import { getProgress } from "../../../api/getRequest";
-import { giveUserInfo } from "../../../redux/actions";
+import AddButton from "../AddButton";
+import AddModal from "../AddModal";
+import Modal from "../../../components/Modal";
+import Modal2 from "../../../components/Modal2";
+import DeleteModal from "../DeleteModal";
 
 const UsersList = () => {
-  const users = useSelector((state) => state.user.usersInfo);
-  const dispatch = useDispatch();
-  console.log(users);
+  const [modal, setModal] = useState(false);
+  const [deleteModal, setDeleteModal] = useState(false);
+  const [chosenId, setChosenId] = useState(0);
 
-  const fetchData = async () => {
-    const data = await getProgress();
-    dispatch(giveUserInfo(data));
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const users = useSelector((state) => state.progress.usersProgress);
 
   const displayUsers = () =>
-    users.map((user) => (
+    users.map(({ id, userName, date, lvls }) => (
       <Users
-        key={user.id}
-        userName={user.userName}
-        userSurname={user.userSurname}
-        score={user.score}
+        key={id}
+        userName={userName}
+        date={date}
+        lvls={calcPassedLvls(lvls)}
+        setIsVisible={setDeleteModal}
+        onClick={() => setChosenId(id)}
       />
     ));
 
-  return <div className={s.root}>{displayUsers()}</div>;
+  return (
+    <div className="container">
+      <AddButton setIsVisible={setModal} />
+      <Modal isVisible={modal} setIsVisible={setModal}>
+        <AddModal setIsVisible={setModal} />
+      </Modal>
+      <Modal2 isVisible={deleteModal} setIsVisible={setDeleteModal}>
+        <DeleteModal id={chosenId} setIsVisible={setDeleteModal} />
+      </Modal2>
+      <div className={s.root}>{displayUsers()}</div>
+    </div>
+  );
 };
 
 export default UsersList;
