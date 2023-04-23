@@ -1,8 +1,8 @@
 import React from "react";
 import s from "./index.module.scss";
-import ArrowDot from "../../../components/ArrowDot";
+import ArrowDot from "../../../../components/ArrowDot";
 import { useDispatch, useSelector } from "react-redux";
-import { addArrowEnd, addArrowStart } from "../../../redux/actions";
+import { addArrowStart } from "../../../../redux/actions";
 
 const InputField = () => {
 	const { inputs } = useSelector((state) => state.game.lvlLogic);

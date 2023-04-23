@@ -1,10 +1,19 @@
-.item {
+.root {
+	overflow: hidden;
+	&:first-child {
+		border-radius: 12px 12px 0 0;
+	}
+	&:last-child {
+		border-radius: 0 0 12px 12px;
+	}
+
 	width: 120px;
 	height: 25px;
 	padding: 5px;
 
 	border: none;
 	background-color: transparent;
+	outline: none;
 
 	font-size: 16px;
 	cursor: pointer;

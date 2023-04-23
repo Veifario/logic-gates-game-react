@@ -3,9 +3,9 @@ import s from "./index.module.scss";
 
 const DropdownItem = ({ text, ...props }) => {
 	return (
-		<div {...props} className={s.root}>
-			<button className={s.item}>{text}</button>
-		</div>
+		<button {...props} className={s.root}>
+			{text}
+		</button>
 	);
 };
 

@@ -1,6 +1,9 @@
 .root {
 	display: inline-block;
-	position: relative !important;
+	position: absolute !important;
+	right: -180px;
+	top: 520px;
+
 	.body {
 		width: 110px;
 		height: 100px;

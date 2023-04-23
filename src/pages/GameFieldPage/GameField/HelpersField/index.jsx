@@ -1,8 +1,8 @@
 import React from "react";
 import s from "./index.module.scss";
-import DisplayDropdown from "../../../components/DropdownMenu/DisplayDropdown";
-import Button from "../../../ui/Button";
-import { clearArrows } from "../../../redux/actions";
+import DisplayDropdown from "../../../../components/DropdownMenu/DisplayDropdown";
+import Button from "../../../../ui/Button";
+import { clearArrows } from "../../../../redux/actions";
 import { useDispatch } from "react-redux";
 
 const HelpersField = () => {

@@ -1,18 +1,15 @@
 import React, { useEffect } from "react";
 import s from "./index.module.scss";
-import InputField from "./InputField";
-import OutputField from "./OutputField";
 import Loader from "../../components/Loader";
-import { Xwrapper } from "react-xarrows";
 import { useDispatch, useSelector } from "react-redux";
+import GameField from "./GameField";
 import { fetchLvlLogic, fetchLvlLogicDone } from "../../redux/actions";
 import { getLvlLogic } from "../../api/getRequest";
-import GatesField from "./GatesField";
-import ArrowsField from "./ArrowsField";
-import HelpersField from "./HelpersField";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
 
 const GameFieldPage = () => {
-	let lvl = 3;
+	let lvl = 1;
 	const dispatch = useDispatch();
 	const loading = useSelector((state) => state.game.loading);
 
@@ -34,13 +31,9 @@ const GameFieldPage = () => {
 		<Loader />
 	) : (
 		<div className={s.root}>
-			<InputField />
-			<Xwrapper>
-				<GatesField />
-				<ArrowsField />
-			</Xwrapper>
-			<OutputField />
-			<HelpersField />
+			<Header />
+			<GameField />
+			<Sidebar />
 		</div>
 	);
 };

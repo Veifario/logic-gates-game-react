@@ -1,0 +1,13 @@
+.root {
+	height: 90vh;
+	width: 100%;
+	position: relative;
+
+	padding: 20px 50px;
+
+	background: linear-gradient(rgba(0, 0, 0, 0.337), rgba(0, 0, 0, 0.5)),
+		url("../../../assets/backgrounds/game3.jpg");
+	background-size: 120% 120%;
+	background-position: center;
+	background-repeat: no-repeat;
+}

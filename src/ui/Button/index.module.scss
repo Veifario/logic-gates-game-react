@@ -1,3 +1,17 @@
 .root {
-	background-color: blue;
+	padding: 10px 20px;
+
+	border-radius: 5px;
+	background-color: rgba(54, 168, 217, 0.746);
+	
+	color: white;
+	letter-spacing: 1px;
+	font-size: 17px;
+	
+	transition: .3s;
+	cursor: pointer;
+	
+	&:hover{
+		background-color: rgb(54, 168, 217);
+	}
 }

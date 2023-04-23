@@ -6,7 +6,7 @@ import {
 	NorGate,
 	NotGate,
 	OrGate,
-} from "../../../components/Gates";
+} from "../../../../components/Gates";
 
 const GatesField = () => {
 	const { gates } = useSelector((state) => state.game.lvlLogic);

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import s from "./index.module.scss";
 import Draggable from "react-draggable";
 import { useDispatch, useSelector } from "react-redux";
@@ -35,6 +35,7 @@ const NotGate = ({ id }) => {
 	};
 
 	const handleArrowEnd = () => {
+		if (typeof getGateArrow() === "number") return;
 		if (settings === id) return;
 		if (settings === "") return;
 		else dispatch(addArrowEnd(id));

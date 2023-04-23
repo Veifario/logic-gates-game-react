@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import s from "./index.module.scss";
-import ArrowDot from "../../../components/ArrowDot";
+import ArrowDot from "../../../../components/ArrowDot";
 import { useDispatch, useSelector } from "react-redux";
-import { addArrowEnd } from "../../../redux/actions";
+import { addArrowEnd } from "../../../../redux/actions";
 
 const OutputField = () => {
 	const dispatch = useDispatch();
