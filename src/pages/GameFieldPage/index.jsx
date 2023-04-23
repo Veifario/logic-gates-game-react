@@ -9,7 +9,7 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 
 const GameFieldPage = () => {
-	let lvl = 1;
+	let lvl = 6;
 	const dispatch = useDispatch();
 	const loading = useSelector((state) => state.game.loading);
 

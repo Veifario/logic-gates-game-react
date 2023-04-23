@@ -13,7 +13,7 @@ const TipsForNandGate = () => {
           <tr>
             <th>A</th>
             <th>B</th>
-            <th>A or B</th>
+            <th>A nand B</th>
           </tr>
           <tr>
             <td>0</td>
@@ -33,7 +33,7 @@ const TipsForNandGate = () => {
           <tr>
             <td>1</td>
             <td>1</td>
-            <td>1</td>
+            <td>0</td>
           </tr>
        </tbody>
       </table>

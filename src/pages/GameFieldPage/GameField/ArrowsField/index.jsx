@@ -42,7 +42,7 @@ const ArrowsField = () => {
 	const displayArrows = () =>
 		arrows.map(({ start, end, output }, index) => (
 			<Xarrow
-				color={output === 1 ? "#21aed9" : "#071b29"}
+				color={output === 1 ? "#FAFA33" : "#071b29"}
 				key={index}
 				zIndex={0}
 				showHead={false}
