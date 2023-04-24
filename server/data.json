@@ -1,12 +1,16 @@
 {
   "progress": [
     {
-      "id": "45ff4e85-d205-4471-89f8-5bffaf8b1374",
-      "userName": "фывв",
-      "date": "23/04/2023 16:42:05",
+      "id": "39a904ae-5107-411b-8c60-869f97088767",
+      "userName": "jhgf",
+      "date": "24/04/2023 14:34:20",
       "lvls": [
         {
           "active": true,
+          "passed": false
+        },
+        {
+          "active": false,
           "passed": false
         },
         {
@@ -28,12 +32,16 @@
       ]
     },
     {
-      "id": "7bf75566-06ad-4efd-a971-f5a4d0e4bc1d",
-      "userName": "sdfsdf",
-      "date": "23/04/2023 16:42:32",
+      "id": "0e7f98f3-9ecd-4a0f-ac8a-cbd284bf5484",
+      "userName": "kjgh",
+      "date": "24/04/2023 14:34:26",
       "lvls": [
         {
           "active": true,
+          "passed": false
+        },
+        {
+          "active": false,
           "passed": false
         },
         {
@@ -55,9 +63,40 @@
       ]
     },
     {
-      "id": "e7db4e55-bffb-498f-bad4-71dde5a9b6f9",
-      "userName": "hello",
-      "date": "23/04/2023 18:14:23",
+      "id": "77efaeac-db7a-437c-8d53-cee4f96b9242",
+      "userName": "hjgf",
+      "date": "24/04/2023 14:34:34",
+      "lvls": [
+        {
+          "active": true,
+          "passed": false
+        },
+        {
+          "active": false,
+          "passed": false
+        },
+        {
+          "active": false,
+          "passed": false
+        },
+        {
+          "active": false,
+          "passed": false
+        },
+        {
+          "active": false,
+          "passed": false
+        },
+        {
+          "active": false,
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "54d31a31-9bad-4f50-93d2-61943a0a392b",
+      "userName": "jkgh",
+      "date": "24/04/2023 14:34:42",
       "lvls": [
         {
           "active": true,
@@ -90,7 +129,11 @@
     {
       "id": 1,
       "lvl": 1,
-      "inputs": [1, 0, 1],
+      "inputs": [
+        1,
+        0,
+        1
+      ],
       "output": 1,
       "gates": {
         "and": 0,
@@ -103,7 +146,11 @@
     {
       "id": 2,
       "lvl": 2,
-      "inputs": [0, 0, 1],
+      "inputs": [
+        0,
+        0,
+        1
+      ],
       "output": 0,
       "gates": {
         "and": 0,
@@ -116,7 +163,13 @@
     {
       "id": 3,
       "lvl": 3,
-      "inputs": [1, 1, 0, 1, 1],
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
       "output": 0,
       "gates": {
         "and": 0,
@@ -129,7 +182,16 @@
     {
       "id": 4,
       "lvl": 4,
-      "inputs": [1, 0, 0, 0, 1, 0, 1, 1],
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
       "output": 1,
       "gates": {
         "and": 1,
@@ -142,7 +204,16 @@
     {
       "id": 5,
       "lvl": 5,
-      "inputs": [0, 0, 0, 0, 0, 1, 1, 1],
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
       "output": 1,
       "gates": {
         "and": 1,
@@ -155,7 +226,20 @@
     {
       "id": 6,
       "lvl": 6,
-      "inputs": [0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0],
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
       "output": 0,
       "gates": {
         "and": 3,
@@ -164,6 +248,18 @@
         "nor": 5,
         "nand": 2
       }
+    }
+  ],
+  "aboutLvls": [
+    {
+      "lvl": 1,
+      "inp": 3,
+      "gates": {
+        "or": 2,
+        "not": 1
+      },
+      "output": 1,
+      "desc": ""
     }
   ]
 }

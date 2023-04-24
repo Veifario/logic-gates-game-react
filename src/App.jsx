@@ -1,20 +1,20 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import {
-	AdminPage,
+	HomePage,
 	CreditsPage,
 	GameFieldPage,
 	LoadPage,
 	NewGamePage,
 	ParamsPage,
-	TreePage
+	TreePage,
 } from "./pages";
 
 function App() {
 	return (
 		<div className="App">
 			<Routes>
-				<Route path="/" element={<AdminPage />} />
+				<Route path="/" element={<HomePage />} />
 				<Route path="/continue" element={<GameFieldPage />} />
 				<Route path="/newgame" element={<NewGamePage />} />
 				<Route path="/load" element={<LoadPage />} />
