@@ -20,7 +20,7 @@ function App() {
 				<Route path="/load" element={<LoadPage />} />
 				<Route path="/params" element={<ParamsPage />} />
 				<Route path="/credits" element={<CreditsPage />} />
-				<Route path="/tree" element={<TreePage/>}/>
+				<Route exact path="/tree/:id" element={<TreePage/>}/>
 			</Routes>
 		</div>
 	);

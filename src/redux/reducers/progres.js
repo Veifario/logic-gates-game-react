@@ -1,4 +1,4 @@
-const initialState = { usersProgress: [], loadingStatus: "", errorMessage: "" };
+const initialState = { usersProgress: [], loadingStatus: "", errorMessage: "", exactUser: {} };
 
 export const progress = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -23,6 +23,8 @@ export const progress = (state = initialState, { type, payload }) => {
       return { ...state, usersProgress: payload, loadingStatus: "loaded" };
     case "PROGRESS_DELETE":
       return { ...state, usersProgress: payload };
+      case "EXACT_USER_FETCHED":
+        return {...state, exactUser: payload, loadingStatus: "loaded"}
     default:
       return state;
   }

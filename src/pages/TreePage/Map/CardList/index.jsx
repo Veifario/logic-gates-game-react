@@ -1,18 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import s from "./index.module.scss";
-import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { getById } from "../../../../api/getRequest";
 
 const CardList = () => {
-
-    const params = useParams()
-
-    console.log(params);
-
-  const cards = useSelector((state) => state.cardList);
-  const dispatch = useDispatch();
-
-
+  // const displayCards = () => {
+  //   // cards.map(({active}) => <Card title={active} />)
+  // };
 
   return <div className={s.root}></div>;
 };
