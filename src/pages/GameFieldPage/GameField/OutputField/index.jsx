@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import s from "./index.module.scss";
 import ArrowDot from "../../../../components/ArrowDot";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,21 +11,10 @@ const OutputField = () => {
 	);
 	const { output } = useSelector((state) => state.game.lvlLogic);
 
-	const arrows = useSelector((state) => state.game.arrows);
-
-	const finishPoint = () => {
-		const foundArrow = arrows.find(({ end }) => end === "output");
-		// if (foundArrow?.output === output) window.alert("ВЫИГРАЛ ЕБАТЬ!");
-	};
-
-	const handleArrowEnd = (id) => {
+	const handleArrowEnd = async (id) => {
 		if (settings === "") return;
 		else dispatch(addArrowEnd(id));
 	};
-
-	useEffect(() => {
-		finishPoint();
-	}, [arrows]);
 
 	return (
 		<div className={s.root}>

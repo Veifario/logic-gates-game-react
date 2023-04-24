@@ -8,6 +8,7 @@ import {
 	NewGamePage,
 	ParamsPage,
 } from "./pages";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
 	return (

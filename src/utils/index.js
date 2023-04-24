@@ -11,3 +11,18 @@ export const calcPassedLvls = (lvls) => {
 	}
 	return passedAmount;
 };
+
+export const calcGatesAmount = (gates) => {
+	let sum = 0;
+	for (const gate in gates) sum += gates[gate];
+	return sum;
+};
+
+export const lvlUp = (lvls) => {
+	for (let i = 0; i < lvls.length; i++) {
+		if (lvls[i].active) lvls[i].passed = true;
+		if (lvls[i - 1]?.passed === true) {
+			lvls[i].active = true;
+		}
+	}
+};

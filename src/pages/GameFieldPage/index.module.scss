@@ -1,6 +1,9 @@
 .root {
 	display: grid;
 	grid-template-columns: 5fr 1fr;
+	grid-template-rows: 1fr 9fr;
+
+	height: 100vh;
 
 	div:first-child {
 		grid-row-start: 1;

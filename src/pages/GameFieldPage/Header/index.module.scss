@@ -3,11 +3,19 @@
 	justify-content: space-between;
 	align-items: center;
 
-	padding: 20px;
+	height: 100%;
+	padding: 0 20px;
 
 	background-color: #2c2d33;
 
 	color: #9bd4c4;
+
+	.btns {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+	}
 
 	.link {
 		display: flex;

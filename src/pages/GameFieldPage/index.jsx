@@ -7,9 +7,12 @@ import { fetchLvlLogic, fetchLvlLogicDone } from "../../redux/actions";
 import { getLvlLogic } from "../../api/getRequest";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import { useParams } from "react-router-dom";
 
 const GameFieldPage = () => {
-	let lvl = 6;
+	const params = useParams();
+
+	const lvl = 1;
 	const dispatch = useDispatch();
 	const loading = useSelector((state) => state.game.loading);
 
