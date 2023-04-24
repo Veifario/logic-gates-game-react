@@ -8,13 +8,12 @@ import ParamsPage from "./ParamsPage";
 import TreePage from "./TreePage";
 
 export {
-	AdminPage,
-	ContinuePage,
-	GameFieldPage,
-	LoadPage,
-	NewGamePage,
-	ParamsPage,
-	CreditsPage,
-	TreePage
-	
+  AdminPage,
+  ContinuePage,
+  GameFieldPage,
+  LoadPage,
+  NewGamePage,
+  ParamsPage,
+  CreditsPage,
+  TreePage
 };
