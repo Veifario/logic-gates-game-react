@@ -17,8 +17,8 @@ export const requestError = (message) => ({
 // _____
 
 export const giveProgress = (data) => ({
-	type: "GIVE_PROGRESS",
-	payload: data,
+  type: "GIVE_PROGRESS",
+  payload: data,
 });
 export const deleteProgress = (data) => ({
   type: "PROGRESS_DELETE",
@@ -57,3 +57,8 @@ export const removeArrow = (arrows) => ({
 });
 
 export const clearArrows = () => ({ type: "CLEAR_ARROWS" });
+
+export const exactUser = (data) => ({
+  type: "EXACT_USER_FETCHED",
+  payload: data,
+});

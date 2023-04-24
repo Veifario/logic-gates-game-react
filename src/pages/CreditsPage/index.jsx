@@ -5,6 +5,7 @@ import img2 from "../../assets/credits/2.jpg";
 import img3 from "../../assets/credits/3.jpg";
 import img4 from "../../assets/credits/4.jpg";
 
+
 const CreditsPage = () => {
 	return (
 		<div className={s.root}>
@@ -91,6 +92,7 @@ const CreditsPage = () => {
 					<p className={s.center}>для работы</p>
 				</div>
 			</div>
+			
 		</div>
 	);
 };
