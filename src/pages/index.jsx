@@ -15,5 +15,6 @@ export {
 	NewGamePage,
 	ParamsPage,
 	CreditsPage,
-	TreePage,
+	TreePage
+
 };
