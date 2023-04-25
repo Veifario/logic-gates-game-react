@@ -1,102 +1,40 @@
 {
   "progress": [
     {
-      "id": "39a904ae-5107-411b-8c60-869f97088767",
-      "userName": "jhgf",
-      "date": "24/04/2023 14:34:20",
+      "id": "a1fa6c27-7ae9-4e3e-9a3f-80f1214cf5f5",
+      "userName": "Alex",
+      "date": "25/04/2023 05:27:49",
       "lvls": [
         {
           "active": true,
-          "passed": false
+          "passed": true
         },
         {
-          "active": false,
-          "passed": false
+          "active": true,
+          "passed": true
         },
         {
-          "active": false,
-          "passed": false
+          "active": true,
+          "passed": true
         },
         {
-          "active": false,
-          "passed": false
+          "active": true,
+          "passed": true
         },
         {
-          "active": false,
-          "passed": false
+          "active": true,
+          "passed": true
         },
         {
-          "active": false,
-          "passed": false
+          "active": true,
+          "passed": true
         }
       ]
     },
     {
-      "id": "0e7f98f3-9ecd-4a0f-ac8a-cbd284bf5484",
-      "userName": "kjgh",
-      "date": "24/04/2023 14:34:26",
-      "lvls": [
-        {
-          "active": true,
-          "passed": false
-        },
-        {
-          "active": false,
-          "passed": false
-        },
-        {
-          "active": false,
-          "passed": false
-        },
-        {
-          "active": false,
-          "passed": false
-        },
-        {
-          "active": false,
-          "passed": false
-        },
-        {
-          "active": false,
-          "passed": false
-        }
-      ]
-    },
-    {
-      "id": "77efaeac-db7a-437c-8d53-cee4f96b9242",
-      "userName": "hjgf",
-      "date": "24/04/2023 14:34:34",
-      "lvls": [
-        {
-          "active": true,
-          "passed": false
-        },
-        {
-          "active": false,
-          "passed": false
-        },
-        {
-          "active": false,
-          "passed": false
-        },
-        {
-          "active": false,
-          "passed": false
-        },
-        {
-          "active": false,
-          "passed": false
-        },
-        {
-          "active": false,
-          "passed": false
-        }
-      ]
-    },
-    {
-      "id": "54d31a31-9bad-4f50-93d2-61943a0a392b",
-      "userName": "jkgh",
-      "date": "24/04/2023 14:34:42",
+      "id": "cd096f48-8164-498e-8165-004b39ee01da",
+      "userName": "new user",
+      "date": "25/04/2023 05:29:08",
       "lvls": [
         {
           "active": true,

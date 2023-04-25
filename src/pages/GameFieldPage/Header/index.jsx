@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import s from "./index.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import Button from "../../../ui/Button";
 import { useSelector } from "react-redux";
 import { calcGatesAmount, lvlUp } from "../../../utils/index.js";
@@ -8,6 +8,10 @@ import { ToastContainer, toast } from "react-toastify";
 import { lvlUpRequest } from "../../../api/updateRequest";
 
 const Header = () => {
+	const params = useParams();
+	const navigate = useNavigate();
+	const location = useLocation();
+
 	// States
 	const [color, setColor] = useState("#f4c430");
 	const [lvlPassed, setLvlPassed] = useState(false);
@@ -15,7 +19,7 @@ const Header = () => {
 	// Selectors
 	const arrows = useSelector((state) => state.game.arrows);
 	const { output, inputs, gates } = useSelector((state) => state.game.lvlLogic);
-	// const { id, lvls } = useSelector(state.progres.userProgress);
+	const { id, lvls } = useSelector((state) => state.progress.exactUser);
 
 	const handleColorChanging = (value) => {
 		setColor(value);
@@ -44,10 +48,26 @@ const Header = () => {
 	};
 
 	const finishLvl = () => {
-		// lvlUp(lvls)
-		// lvlUpRequest(id, lvls)
+		if (+params.id + 1 > lvls.length) {
+			toast.info("🎉 Congrats! You passed all levels.", {
+				position: "top-center",
+			});
+			return;
+		}
+		lvlUp(lvls, params.id);
+		lvlUpRequest(id, lvls);
 		toast.success("Winner! Next level is available");
 		setLvlPassed(true);
+	};
+
+	const handleNextLvl = () => {
+		if (+params.id + 1 > lvls.length) {
+			toast.info("New levels upcoming...", { position: "top-center" });
+			return;
+		}
+		const nextLvlPath = location.pathname.replace(/\d$/, +params.id + 1);
+		navigate(nextLvlPath);
+		navigate(0);
 	};
 
 	useEffect(() => {
@@ -57,7 +77,7 @@ const Header = () => {
 	return (
 		<div>
 			<div className={s.root}>
-				<Link className={s.link} to="/">
+				<Link className={s.link} to={`${location.pathname.slice(0, -2)}`}>
 					!open
 				</Link>
 				<input
@@ -76,12 +96,15 @@ const Header = () => {
 					>
 						Check Result
 					</Button>
-					<Button style={{ display: lvlPassed ? "initial" : "none" }}>
+					<Button
+						style={{ display: lvlPassed ? "initial" : "none" }}
+						onClick={handleNextLvl}
+					>
 						Next Level
 					</Button>
 				</div>
 			</div>
-			<ToastContainer autoClose={2000} theme="dark" position="bottom-center" />
+			<ToastContainer autoClose={3000} theme="dark" position="bottom-center" />
 		</div>
 	);
 };

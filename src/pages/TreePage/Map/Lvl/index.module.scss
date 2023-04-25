@@ -1,0 +1,17 @@
+.root {
+	padding: 20px;
+
+	border-radius: 15px;
+	border: none;
+	outline: none;
+	background: #0ea1be;
+
+	font-size: 20px;
+
+	cursor: pointer;
+
+	&.noAccess {
+		opacity: .5;
+		cursor: no-drop;
+	}
+}

@@ -1,5 +1,4 @@
 import HomePage from "./HomePage";
-import ContinuePage from "./ContinuePage";
 import CreditsPage from "./CreditsPage";
 import GameFieldPage from "./GameFieldPage";
 import LoadPage from "./LoadPage";
@@ -9,12 +8,10 @@ import TreePage from "./TreePage";
 
 export {
 	HomePage,
-	ContinuePage,
 	GameFieldPage,
 	LoadPage,
 	NewGamePage,
 	ParamsPage,
 	CreditsPage,
-	TreePage
-
+	TreePage,
 };

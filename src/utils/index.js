@@ -18,11 +18,7 @@ export const calcGatesAmount = (gates) => {
 	return sum;
 };
 
-export const lvlUp = (lvls) => {
-	for (let i = 0; i < lvls.length; i++) {
-		if (lvls[i].active) lvls[i].passed = true;
-		if (lvls[i - 1]?.passed === true) {
-			lvls[i].active = true;
-		}
-	}
+export const lvlUp = (lvls, lvlNum) => {
+	lvls[lvlNum - 1].passed = true;
+	lvls[lvlNum].active = true;
 };

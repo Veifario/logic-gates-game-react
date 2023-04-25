@@ -16,12 +16,12 @@ function App() {
 		<div className="App">
 			<Routes>
 				<Route path="/" element={<HomePage />} />
-				<Route path="/continue" element={<GameFieldPage />} />
 				<Route path="/newgame" element={<NewGamePage />} />
 				<Route path="/load" element={<LoadPage />} />
 				<Route path="/params" element={<ParamsPage />} />
 				<Route path="/credits" element={<CreditsPage />} />
 				<Route exact path="/tree/:id" element={<TreePage/>}/>
+				<Route exact path="/tree/:id/:id" element={<GameFieldPage/>}/>
 			</Routes>
 		</div>
 	);

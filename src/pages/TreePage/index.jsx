@@ -1,41 +1,57 @@
-import React, { useEffect } from 'react'
-import Map from './Map'
-import CardList from './Map/CardList'
-import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
-import { exactUser, request, requestError } from '../../redux/actions';
-import { getById } from '../../api/getRequest';
+import React, { useEffect } from "react";
+import Map from "./Map";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
+import {
+	exactUser,
+	lvlsAccessFetch,
+	request,
+	requestError,
+} from "../../redux/actions";
+import { getById } from "../../api/getRequest";
+import Loader from "../../components/Loader";
+import { updateProgressDate } from "../../api/updateRequest";
+import { getUploadDate } from "../../utils/index";
 
 const TreePage = () => {
-  const status = useSelector((state) => state.progress.loadingStatus);
-  const progress = useSelector((state) => state.progress.exactUser);
-  const dispatch = useDispatch();
+	const params = useParams();
+	const navigate = useNavigate();
 
+	const dispatch = useDispatch();
 
-  const params = useParams();
+	const status = useSelector((state) => state.progress.loadingStatus);
+	const { userName } = useSelector((state) => state.progress.exactUser);
 
-  const fetchCards = async () => {
-    try {
-      dispatch(request());
-      const data = await getById(params.id);
-      dispatch(exactUser(data));
-    } catch (error) {
-      dispatch(requestError(error));
-    }
-  };
+	const fetchCards = async () => {
+		try {
+			dispatch(request());
+			const data = await getById(params.id);
+			dispatch(exactUser(data));
+			dispatch(lvlsAccessFetch(data.lvls));
+		} catch (error) {
+			dispatch(requestError(error));
+		}
+	};
 
-  useEffect(() => {
-    fetchCards();
-  }, []);
+	const handleUpdateProgressDate = () => {
+		updateProgressDate(params.id, getUploadDate());
+		navigate("/");
+		navigate(0);
+	};
 
-  console.log(progress.lvls);
-  
-  return (
-    <div>
-        <Map/>
-        {}
-    </div>
-  )
-}
+	useEffect(() => {
+		fetchCards();
+	}, []);
 
-export default TreePage
+	return status === "loading" ? (
+		<Loader />
+	) : (
+		<div>
+			<button onClick={handleUpdateProgressDate}>!open</button>
+			<h1>{userName}</h1>
+			<Map />
+		</div>
+	);
+};
+
+export default TreePage;
