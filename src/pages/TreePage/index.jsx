@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import s from './index.module.scss'
 import Map from "./Map";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
@@ -46,10 +47,11 @@ const TreePage = () => {
 	return status === "loading" ? (
 		<Loader />
 	) : (
-		<div>
-			<button onClick={handleUpdateProgressDate}>!open</button>
-			<h1>{userName}</h1>
-			<Map />
+		<div className={s.root}>
+			<button className={s.btn} onClick={handleUpdateProgressDate}>!OPEN</button>
+			<h1 className={s.user}>{userName}</h1>
+			<div className={s.progress}>Your Progress Tree</div>
+			<Map className={s.root}/>
 		</div>
 	);
 };

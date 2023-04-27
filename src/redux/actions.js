@@ -32,7 +32,10 @@ export const exactUser = (data) => ({
 });
 export const lvlsAccessFetch = (data) => ({
 	type: "LVLS_ACCESSED_FETCHED",
-	payload: data,
+	payload: data.map((item, index) => ({
+		...item,
+		className: `lvlstyle-${index + 1}`
+	})),
 });
 
 // Game Actions

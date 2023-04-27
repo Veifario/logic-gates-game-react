@@ -3,7 +3,7 @@
     {
       "id": "a1fa6c27-7ae9-4e3e-9a3f-80f1214cf5f5",
       "userName": "Alex",
-      "date": "25/04/2023 05:27:49",
+      "date": "25/04/2023 21:18:40",
       "lvls": [
         {
           "active": true,
@@ -34,18 +34,18 @@
     {
       "id": "cd096f48-8164-498e-8165-004b39ee01da",
       "userName": "new user",
-      "date": "25/04/2023 05:29:08",
+      "date": "27/04/2023 09:54:26",
       "lvls": [
         {
           "active": true,
-          "passed": false
+          "passed": true
         },
         {
-          "active": false,
-          "passed": false
+          "active": true,
+          "passed": true
         },
         {
-          "active": false,
+          "active": true,
           "passed": false
         },
         {
