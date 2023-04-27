@@ -1,10 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import s from "./index.module.scss";
 import icon3 from "../../assets/settings.png";
-import { Link } from "react-router-dom";
+import { Link, json } from "react-router-dom";
 import DarkMode from "./DarkMode";
+import audio from "../../assets/audio/back-songs.mp3";
+import useSound from "use-sound";
+import { Howl } from "howler";
 
 const ParamsPage = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const [play, { stop }] = useSound(audio);
+
+  useEffect(() => {
+    const data = window.localStorage.getItem("IS_CHECKED");
+    if (data !== null) setIsChecked(JSON.parse(data));
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("IS_CHECKED", JSON.stringify(isChecked));
+  }, [isChecked]);
+
+  function checkSong() {
+    const data = JSON.parse(window.localStorage.getItem("IS_CHECKED"));
+    console.log(data);
+    if (data === true) {
+      setIsChecked(!data);
+      stop();
+    } else if (data === false) {
+      setIsChecked(!data);
+      play();
+    }
+  }
+
   return (
     <div className={s.root}>
       <div className={s.bac}>
@@ -24,6 +52,10 @@ const ParamsPage = () => {
             <h2>Параметры</h2>
             <div className={s.content}>
               <DarkMode />
+              <h2>Music</h2>
+              <button onClick={checkSong} className={s.musicBtn}>
+                <b>Вкл/Выкл</b>
+              </button>
             </div>
           </div>
         </div>
