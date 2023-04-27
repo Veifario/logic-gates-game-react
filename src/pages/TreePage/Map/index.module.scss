@@ -1,15 +1,10 @@
 .root {
-	
-	
-	.container{
-		height: 80vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 90px;
-	padding: 50px;
-	
+	.container {
+		height: 68vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 20px 50px;
 	}
-	
 }

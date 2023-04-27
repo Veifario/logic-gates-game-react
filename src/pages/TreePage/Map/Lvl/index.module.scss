@@ -1,22 +1,20 @@
 .root {
-  padding: 20px;
-  margin: 70px;
-  border-radius: 50%;
-  // border: none;
-  // outline: none;
-  background: green;
-  color: white;
-  width: 150px;
-  height: 150px;
-  font-size: 40px;
-  box-shadow: yellow 0px 0px 20px 5px;
+	padding: 20px;
+	// margin: 70px;
+	border-radius: 50%;
 
-  cursor: pointer;
+	background: green;
+	color: white;
+	width: 150px;
+	height: 150px;
+	font-size: 40px;
+	box-shadow: yellow 0px 0px 20px 5px;
 
-  &.noAccess {
-    
-    cursor: no-drop;
-	background: red;
-	box-shadow: black 0px 0px 20px 5px;
-  }
+	cursor: pointer;
+
+	&.noAccess {
+		cursor: no-drop;
+		background: red;
+		box-shadow: black 0px 0px 20px 5px;
+	}
 }

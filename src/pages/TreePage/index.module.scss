@@ -1,32 +1,27 @@
 .root {
-  padding: 15px;
-
-  background: url(../../assets/backgrounds/backgroundtree3.png) no-repeat;
-  background-size: cover;
-
-
-  .user {
-    color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-  }
-  .btn {
-    width: 100px;
-    height: 50px;
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    border-radius: 40px;
-
-  }
-  .progress {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 70px;
-    color: purple;
-    margin-top: 30px;
-  }
+	padding: 15px;
+	background: url(../../assets/backgrounds/backgroundtree3.png) no-repeat;
+	background-size: cover;
+	.user {
+		color: red;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.btn {
+		width: 100px;
+		height: 50px;
+		background-color: red;
+		color: white;
+		font-size: 20px;
+		border-radius: 40px;
+	}
+	.progress {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 70px;
+		color: purple;
+		margin-top: 30px;
+	}
 }
