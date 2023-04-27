@@ -1,14 +1,20 @@
 import React from "react";
 import { useState } from "react";
 import s from "./index.module.scss";
+import Monitor from "./Monitor";
 
 const Interactive = () => {
-	const [lampColor, setLampColor] = useState("transparent");
-	const [lampShadow, setLampShadow] = useState("none");
-	const [lineColor, setLineColor] = useState("white");
-	const [lineShadow, setLineShadow] = useState("none");
-	const [leverState, setLeverState] = useState("blue");
 	const [switcherState, setSwitcherState] = useState("white");
+	const [leverState, setLeverState] = useState("red");
+
+	const [firstLineShadow, setFirstLineShadow] = useState("none");
+	const [firstLineColor, setFirstLineColor] = useState("white");
+
+	const [lineShadow, setLineShadow] = useState("none");
+	const [lineColor, setLineColor] = useState("white");
+
+	const [lampShadow, setLampShadow] = useState("none");
+	const [lampColor, setLampColor] = useState("transparent");
 	const [monitorText, setMonitorText] = useState("black");
 
 	const changeMonitorTextColor = () => {
@@ -21,7 +27,13 @@ const Interactive = () => {
 	const switcherChanger = () => {
 		if (switcherState === "white") {
 			setSwitcherState("green");
-		} else setSwitcherState("white");
+			setFirstLineColor("rgb(135, 196, 155)");
+			setFirstLineShadow("0 0 25px 0 rgba(193, 214, 168, 0.81)");
+		} else {
+			setSwitcherState("white");
+			setFirstLineColor("white");
+			setFirstLineShadow("none");
+		}
 	};
 
 	// Lamp color/shadow changers
@@ -49,28 +61,25 @@ const Interactive = () => {
 		} else setLineShadow("none");
 	};
 
-	// Lever logic
 	const leverLogic = () => {
 		if (leverState === "blue") {
 			setLeverState("red");
-			setLineColor("white");
-			setLineShadow("none");
-			setLampColor("transparent");
-			setLampShadow("none");
-			setMonitorText("black");
+			if (switcherState === "green") {
+				colorChanger();
+				shadowChanger();
+				lineColorChanger();
+				lineShadowChanger();
+				changeMonitorTextColor();
+			}
 		} else {
 			setLeverState("blue");
-			setLineColor("RGB(135, 196, 155)");
-			setLineShadow("0 0 25px 0 rgba(193, 214, 168, 0.81)");
-			setLampColor("yellow");
-			setLampShadow("0 0 10px 2px rgba(255,255,0,.7)");
-			setMonitorText("green");
-		}
-	};
-
-	// Elec. flow logic
-	const ElecFlowLogic = () => {
-		if (switcherChanger === "white") {
+			if (switcherState === "green") {
+				colorChanger();
+				shadowChanger();
+				lineColorChanger();
+				lineShadowChanger();
+				changeMonitorTextColor();
+			}
 		}
 	};
 
@@ -78,12 +87,14 @@ const Interactive = () => {
 		<div className={s.root}>
 			<button
 				onClick={() => {
-					colorChanger();
-					shadowChanger();
-					lineColorChanger();
-					lineShadowChanger();
-					switcherChanger();
-					changeMonitorTextColor();
+					if (leverState === "blue") {
+						colorChanger();
+						shadowChanger();
+						lineColorChanger();
+						lineShadowChanger();
+						switcherChanger();
+						changeMonitorTextColor();
+					} else switcherChanger();
 				}}
 				style={{ backgroundColor: switcherState }}
 				className={s.switcher}
@@ -95,6 +106,10 @@ const Interactive = () => {
 				}}
 				className={s.lever}
 			></button>
+			<div
+				className={s.line0}
+				style={{ borderColor: firstLineColor, boxShadow: firstLineShadow }}
+			></div>
 			<div
 				className={s.line1}
 				style={{ borderColor: lineColor, boxShadow: lineShadow }}
@@ -135,24 +150,7 @@ const Interactive = () => {
 				style={{ backgroundColor: lampColor, boxShadow: lampShadow }}
 			></div>
 
-			{/* Monitor */}
-			<div className={s.monitor}>
-				<div className={s.inner}>
-					<div className={s.body}>
-						<div style={{ color: monitorText }} className={s.info}>
-							привет! давайте мы расскажем немного об этой игре. <br />
-							Наша игра представляет собой симулятор, который будет полезен
-							любителям программирования и тем, кто только начинает свой путь в
-							этой среде. Вам предстоит изучить непростую науку и внедрить ее в
-							жизнь, чтобы обеспечить благополучное существование своему герою.
-							Нажимай на кнопку "Играть", и приступай покорять мир кодинга,
-							удачи)
-						</div>
-					</div>
-					<div className={s.holder1}></div>
-					<div className={s.holder2}></div>
-				</div>
-			</div>
+			<Monitor monitorText={monitorText} />
 		</div>
 	);
 };

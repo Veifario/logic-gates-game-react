@@ -97,7 +97,7 @@ const Header = () => {
 						Check Result
 					</Button>
 					<Button
-						style={{ display: lvlPassed ? "initial" : "none" }}
+						// style={{ display: lvlPassed ? "initial" : "none" }}
 						onClick={handleNextLvl}
 					>
 						Next Level
